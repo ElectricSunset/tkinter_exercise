@@ -32,10 +32,9 @@ button.pack()
 # print 'Mousewheel' when the user holds down shift and uses the mousewheel while text is selected
 
 text.bind('<Shift-MouseWheel>', lambda event: print('Mousewheel'))
+
 # run
 window.mainloop()
-
-
 
 # Note: More Tkinter Keybinding can be googled "Tkinter Event Binding"
 # pythontutorial.net/tkinter/tkinter-event-binding
