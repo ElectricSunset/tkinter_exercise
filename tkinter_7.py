@@ -16,15 +16,27 @@ text.pack()
 entry = ttk.Entry(window)
 entry.pack()
 
-btn = ttk.Button(window, text='A Button')
-btn.pack()
+button = ttk.Button(window, text='A Button')
+button.pack()
 
 # events
-btn.bind('<Alt-KeyPress-a>', lambda event: print('an event'))
-window.bind('<Motion>', get_pos)
+# button.bind('<Alt-KeyPress-a>', lambda event: print('an event'))
+# window.bind('<KeyPress>', lambda event: print(f'a button was pressed ({event.char})'))
 
-window.bind('<KeyPress ')
+# window.bind('<Motion>', get_pos)
+
+# entry.bind('<FocusIn>', lambda event: print('entru field was selected'))
+# entry.bind('<FocusOut>', lambda event: print('entru field was unselected'))
+
+# Exercise:
+# print 'Mousewheel' when the user holds down shift and uses the mousewheel while text is selected
+
+text.bind('<Shift-MouseWheel>', lambda event: print('Mousewheel'))
 # run
 window.mainloop()
 
-# Vid time : 1.40.00 ~
+
+
+# Note: More Tkinter Keybinding can be googled "Tkinter Event Binding"
+# pythontutorial.net/tkinter/tkinter-event-binding
+# Vid time : 1.40.00 ~ 1.53.40
