@@ -37,14 +37,12 @@ button3b.pack()
 label3 = ttk.Label(tab3, text= ' Text in tab 3')
 label3.pack()
 
-
-
 notebook.add(tab1, text='Tab 1')
 notebook.add(tab2, text='Tab 2')
 notebook.add(tab3, text='Tab 3')
 notebook.pack()
 
-
-
 # run
 window.mainloop()
+
+# Vid time :  ~ 03.27.55
