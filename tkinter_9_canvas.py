@@ -51,25 +51,29 @@ canvas.pack()
 # brush_size = 4
 # canvas.bind('<Motion>', track)
 
-def track(event):
+def draw_on_canvas(event):
     x= event.x
     y= event.y
+    canvas.create_oval((x-brush_size/2,
+                    y-brush_size/2,
+                    x+brush_size/2,
+                    y+brush_size/2), 
+                    fill='black')
 
-    return event.x, event.y
+def brush_size_adjust(event):
+    global brush_size
+    if event.delta >0:
+        brush_size += 4
+    else:
+        brush_size -= 4
+    
+    brush_size = max(0,min(brush_size,50))
 
-def draw(event):
-    print(canvas.bind('<Motion>', track))
-    # canvas.create_oval((x-brush_size/2,
-    #                 y-brush_size/2,
-    #                 x+brush_size/2,
-    #                 y+brush_size/2), 
-    #                 fill='red')
-
-
-brush_size = 4
-canvas.bind('<Button>', draw)
+brush_size = 2
+canvas.bind('<Motion>', draw_on_canvas)
+canvas.bind('<MouseWheel>')
 
 # run
 window.mainloop()
 
-# Vid time : 18.23.15 ~
+# Vid time : 02.18.23 ~ 2.34.40

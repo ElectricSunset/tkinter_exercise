@@ -51,4 +51,4 @@ spin2.pack()
 # # run
 window.mainloop()
 
-# Vid time : 1.53.40 ~ 18.23.15
+# Vid time : 1.53.40 ~ 02.18.23
